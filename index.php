@@ -137,10 +137,15 @@ function e($s){ return htmlspecialchars($s, ENT_QUOTES, "UTF-8"); }
 
   <!-- QUIÉN SOY -->
   <section class="alt">
-    <div class="wrap reveal">
-      <p class="eyebrow">Quién soy</p>
-      <h2 class="section-title">Hola, soy <span class="hl">Marcela</span></h2>
-      <p class="lead"><?= e($data["quien_soy"]) ?></p>
+    <div class="wrap reveal quien-soy">
+      <div class="quien-texto">
+        <p class="eyebrow">Quién soy</p>
+        <h2 class="section-title">Hola, soy <span class="hl">Marcela</span></h2>
+        <p class="lead"><?= e($data["quien_soy"]) ?></p>
+      </div>
+      <div class="quien-foto">
+        <img src="marcela.png" alt="Marcela Fiorilo" loading="lazy">
+      </div>
     </div>
   </section>
 
