@@ -138,11 +138,6 @@ section.alt { background: var(--azul-deep); }
   max-width: 340px;
   aspect-ratio: 4 / 5;
   margin-left: auto;
-  border-radius: var(--radio);
-  overflow: hidden;
-  background: linear-gradient(155deg, rgba(244,155,196,.55), rgba(20,42,166,.85));
-  border: 1px solid rgba(255,255,255,.16);
-  box-shadow: 0 24px 44px rgba(14,31,122,.4);
 }
 .quien-foto img {
   display: block;
@@ -151,6 +146,7 @@ section.alt { background: var(--azul-deep); }
   max-width: 100%;
   object-fit: cover;
   object-position: top center;
+  filter: drop-shadow(0 18px 34px rgba(14,31,122,.5));
 }
 
 /* "Leí lo que necesitan": dos columnas de chips */
