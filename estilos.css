@@ -36,6 +36,9 @@ body {
 /* ---------- Tipografía ---------- */
 h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.25; margin: 0; }
 
+/* Títulos con resaltado rosa: más aire entre líneas para que no se pisen */
+.hero h1, .section-title, .contacto h2 { line-height: 1.45; }
+
 .eyebrow {
   font-family: var(--sans);
   font-weight: 600;
@@ -129,25 +132,20 @@ section.alt { background: var(--azul-deep); }
 .quien-texto .lead { max-width: none; }
 .quien-foto {
   position: relative;
-  align-self: end;
-}
-.quien-foto::before { /* halo rosa detrás de la foto */
-  content: "";
-  position: absolute;
-  inset: 8% 4% -4% 4%;
-  background: radial-gradient(circle at 50% 40%, rgba(244,155,196,.45), rgba(244,155,196,0) 70%);
-  z-index: 0;
-  pointer-events: none;
+  width: 100%;
+  max-width: 360px;
+  margin-left: auto;
+  border-radius: var(--radio);
+  overflow: hidden;
+  background: linear-gradient(155deg, rgba(244,155,196,.55), rgba(20,42,166,.85));
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 24px 44px rgba(14,31,122,.4);
 }
 .quien-foto img {
-  position: relative;
-  z-index: 1;
   display: block;
   width: 100%;
-  max-width: 380px;
-  margin: 0 auto;
   height: auto;
-  filter: drop-shadow(0 24px 40px rgba(14,31,122,.45));
+  margin-bottom: -1px; /* evita hueco al fondo del recorte */
 }
 
 /* "Leí lo que necesitan": dos columnas de chips */
@@ -228,9 +226,8 @@ footer { text-align: center; padding: 40px 0 56px; color: rgba(255,255,255,.55);
   body { font-size: 16px; }
   section { padding: 64px 0; }
   .grid.cols-2, .grid.cols-3, .needs, .cuentas { grid-template-columns: 1fr; }
-  .quien-soy { grid-template-columns: 1fr; gap: 24px; }
-  .quien-foto { order: -1; }
-  .quien-foto img { max-width: 280px; }
+  .quien-soy { grid-template-columns: 1fr; gap: 28px; }
+  .quien-foto { max-width: 300px; margin: 0 auto; }
   .frente { grid-template-columns: 40px 1fr; gap: 14px; }
 }
 
