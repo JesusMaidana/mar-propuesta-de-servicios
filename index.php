@@ -84,7 +84,7 @@ $data = [
 
 
   /* ---------------- DATOS DE MARCELA (constante — casi no se toca) --------------- */
-  "quien_soy" => "Soy Marcela, community manager y editora de contenido. Ayudo a marcas y emprendedores a que sus redes trabajen a su favor: no publico por publicar, cada pieza tiene un propósito y está pensada para acercarles clientes. Trabajo con estrategia, foco en crecimiento orgánico y conversión, y reportes claros para que siempre sepan cómo viene todo.",
+  "quien_soy" => "Soy community manager y editora de contenido. Ayudo a marcas y emprendedores a que sus redes trabajen a su favor: no publico por publicar, cada pieza tiene un propósito y está pensada para acercarles clientes. Trabajo con estrategia, foco en crecimiento orgánico y conversión, y reportes claros para que siempre sepan cómo viene todo.",
 
   "cuentas" => [
     [ "nombre" => "Shukran Audiovisual", "handle" => "@shukran.audiovisual", "url" => "https://www.instagram.com/shukran.audiovisual/" ],
