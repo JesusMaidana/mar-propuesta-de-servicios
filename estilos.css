@@ -34,7 +34,7 @@ body {
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
 /* ---------- Tipografía ---------- */
-h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; margin: 0; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.25; margin: 0; }
 
 .eyebrow {
   font-family: var(--sans);
@@ -50,9 +50,9 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; marg
 .hl {
   background: var(--rosa);
   color: var(--azul-800);
-  padding: .04em .3em .1em;
-  line-height: 1;
+  padding: 0 .28em;
   border-radius: 6px;
+  box-shadow: 0 0 0 .05em var(--rosa);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   font-style: normal;
