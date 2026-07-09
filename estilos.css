@@ -1,0 +1,206 @@
+/* =========================================================
+   PROPUESTA — Identidad de Marcela Fiorilo
+   Este archivo casi no se toca. Los textos se editan en index.php.
+   ========================================================= */
+
+:root {
+  --azul:        #1B37C9;   /* fondo base */
+  --azul-deep:   #142AA6;   /* secciones alternas / tarjetas */
+  --azul-800:    #0E1F7A;   /* bordes / sombras */
+  --rosa:        #F49BC4;   /* acento principal */
+  --rosa-strong: #EF7DB0;   /* acento fuerte (hover) */
+  --hueso:       #EEF1FA;   /* texto suave */
+  --blanco:      #FFFFFF;
+  --radio:       18px;
+  --maxw:        1080px;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans:  "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--azul);
+  color: var(--blanco);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- Tipografía ---------- */
+h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; margin: 0; }
+
+.eyebrow {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: .8rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--rosa);
+  margin: 0 0 14px;
+}
+
+/* Firma visual: destacado rosa detrás de una palabra */
+.hl {
+  background: var(--rosa);
+  color: var(--azul-800);
+  padding: .02em .28em;
+  border-radius: 6px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  font-style: normal;
+}
+
+/* ---------- Secciones ---------- */
+section { padding: 88px 0; }
+section.alt { background: var(--azul-deep); }
+.section-title { font-size: clamp(1.9rem, 4.5vw, 3rem); margin-bottom: 34px; }
+.lead { font-size: 1.15rem; color: var(--hueso); max-width: 60ch; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  padding: 120px 0 104px;
+  overflow: hidden;
+}
+.hero::after { /* glow rosa inferior derecho, como en el deck */
+  content: "";
+  position: absolute;
+  right: -140px; bottom: -160px;
+  width: 460px; height: 460px;
+  background: radial-gradient(circle, rgba(244,155,196,.55), rgba(244,155,196,0) 68%);
+  pointer-events: none;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 6.5vw, 4.4rem);
+  max-width: 16ch;
+  margin-bottom: 22px;
+}
+.hero .lead { font-size: 1.25rem; margin-bottom: 36px; }
+
+/* ---------- CTA ---------- */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--rosa);
+  color: var(--azul-800);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 999px;
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+  box-shadow: 0 10px 26px rgba(0,0,0,.18);
+}
+.cta:hover { background: var(--rosa-strong); transform: translateY(-2px); }
+.cta svg { width: 20px; height: 20px; }
+
+/* ---------- Grillas de tarjetas ---------- */
+.grid { display: grid; gap: 20px; }
+.grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+.card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radio);
+  padding: 26px;
+}
+.alt .card { background: rgba(255,255,255,.05); }
+.card h3 { font-size: 1.25rem; margin-bottom: 10px; }
+.card p { margin: 0; color: var(--hueso); }
+
+/* "Leí lo que necesitan": dos columnas de chips */
+.needs { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; }
+.needs h3 { font-size: 1.15rem; margin-bottom: 16px; color: var(--rosa); font-family: var(--sans); font-weight: 600; letter-spacing: .04em; }
+.needs ul { list-style: none; margin: 0; padding: 0; }
+.needs li {
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  background: rgba(255,255,255,.06);
+  border-left: 3px solid var(--rosa);
+  border-radius: 10px;
+}
+
+/* Frentes: número + contenido */
+.frente { display: grid; grid-template-columns: 56px 1fr; gap: 20px; align-items: start; padding: 22px 0; border-top: 1px solid rgba(255,255,255,.12); }
+.frente:first-child { border-top: 0; }
+.frente .num { font-family: var(--serif); font-size: 1.7rem; color: var(--rosa); line-height: 1; }
+.frente h3 { font-size: 1.3rem; margin-bottom: 8px; }
+.frente p { margin: 0; color: var(--hueso); }
+
+/* B2B destacado */
+.b2b-box {
+  background: linear-gradient(135deg, rgba(244,155,196,.16), rgba(244,155,196,.04));
+  border: 1px solid rgba(244,155,196,.35);
+  border-radius: var(--radio);
+  padding: 36px;
+}
+.b2b-box p { font-size: 1.12rem; color: var(--blanco); margin: 0; max-width: 70ch; }
+
+/* Cuentas (links a Instagram) */
+.cuentas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.cuenta {
+  display: flex; justify-content: space-between; align-items: center; gap: 14px;
+  text-decoration: none; color: var(--blanco);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  padding: 16px 20px;
+  transition: border-color .18s ease, transform .18s ease, background .18s ease;
+}
+.cuenta:hover { border-color: var(--rosa); transform: translateY(-2px); background: rgba(255,255,255,.09); }
+.cuenta .nombre { font-weight: 600; }
+.cuenta .handle { color: var(--rosa); font-size: .95rem; }
+
+/* Testimonios */
+.testi p { font-style: italic; margin: 0 0 16px; }
+.testi .autor { font-weight: 600; }
+.testi .marca { color: var(--rosa); font-size: .92rem; }
+
+/* Proceso */
+.etapa { display: grid; grid-template-columns: 1fr; gap: 6px; padding: 20px 0; border-bottom: 1px dashed rgba(255,255,255,.18); }
+.etapa .tiempo { color: var(--rosa); font-size: .9rem; font-weight: 600; }
+.etapa h3 { font-size: 1.15rem; }
+
+/* Honorarios */
+.precio-box { max-width: 640px; }
+.precio { font-family: var(--serif); font-size: clamp(2.4rem, 7vw, 3.6rem); color: var(--rosa); }
+.incluye { list-style: none; padding: 0; margin: 22px 0 0; }
+.incluye li { padding: 9px 0 9px 30px; position: relative; color: var(--hueso); }
+.incluye li::before { content: "✓"; position: absolute; left: 0; color: var(--rosa); font-weight: 700; }
+.nota { margin-top: 20px; font-size: .95rem; color: var(--hueso); opacity: .85; }
+
+/* Contacto final */
+.contacto { text-align: center; }
+.contacto h2 { font-size: clamp(2rem, 6vw, 3.2rem); margin-bottom: 12px; }
+.contacto .mail { display: block; margin-top: 22px; color: var(--rosa); text-decoration: none; font-weight: 500; }
+.contacto .mail:hover { text-decoration: underline; }
+
+footer { text-align: center; padding: 40px 0 56px; color: rgba(255,255,255,.55); font-size: .85rem; }
+
+/* ---------- Animación de entrada (sutil) ---------- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  section { padding: 64px 0; }
+  .grid.cols-2, .grid.cols-3, .needs, .cuentas { grid-template-columns: 1fr; }
+  .frente { grid-template-columns: 40px 1fr; gap: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .cta, .cuenta { transition: none; }
+}
