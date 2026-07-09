@@ -50,7 +50,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; marg
 .hl {
   background: var(--rosa);
   color: var(--azul-800);
-  padding: .02em .28em;
+  padding: .04em .3em .1em;
+  line-height: 1;
   border-radius: 6px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;

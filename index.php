@@ -6,7 +6,6 @@
    - Marcela: cambiá SOLO los textos entre comillas de aquí abajo.
    - No borres corchetes [ ], comas , ni comillas ".
    - La parte de "DATOS DE MARCELA" es igual en toda propuesta: casi no se toca.
-   - Los {{PLACEHOLDER}} son valores a completar (honorarios, tiempos).
    ========================================================================= */
 
 $data = [
@@ -61,19 +60,18 @@ $data = [
   "b2b_titulo" => 'El ángulo que puede <span class="hl">mover la aguja</span>: clientes B2B',
   "b2b_texto"  => "Consorcios, arquitectos, constructoras y oficinas son un público con ticket alto y compra recurrente. Para llegar ahí combino tres cosas: contenido que muestre a Flores Negras haciendo proyectos y ambientaciones (no solo la maceta suelta), pauta en Meta segmentada a ese público y esas zonas, y una comunicación preparada para responder ese tipo de consulta. Es donde veo más potencial de crecimiento.",
 
-  // Cómo trabajaríamos (tiempos como placeholder hasta definir)
+  // Cómo trabajaríamos
   "etapas" => [
-    [ "tiempo" => "{{TIEMPO_ETAPA_1}}", "titulo" => "Diagnóstico y puesta a punto",
+    [ "titulo" => "Diagnóstico y puesta a punto",
       "texto" => "Audito redes, tienda y Facebook. Defino línea visual, tono y calendario de contenidos." ],
-    [ "tiempo" => "{{TIEMPO_ETAPA_2}}", "titulo" => "En marcha",
+    [ "titulo" => "En marcha",
       "texto" => "Contenido, historias, feed, newsletter y gestión diaria funcionando de forma constante." ],
-    [ "tiempo" => "{{TIEMPO_ETAPA_3}}", "titulo" => "Proyectos y B2B",
+    [ "titulo" => "Proyectos y B2B",
       "texto" => "Acompañamiento de Proyecto Barrio y Taller, y arranque de la pauta orientada al público B2B." ],
   ],
 
-  // Honorarios (NO inventar: completar cuando estén definidos)
+  // Honorarios
   "honorarios_modalidad" => "Fee mensual",
-  "honorarios_monto" => "{{HONORARIOS}}",
   "honorarios_incluye" => [
     "Gestión de Instagram (historias, feed y destacadas)",
     "Newsletter mensual",
@@ -82,7 +80,7 @@ $data = [
     "Acompañamiento de Proyecto Barrio y Taller de plantas",
     "Reporte mensual de métricas",
   ],
-  "honorarios_nota" => "Propuesta personalizada: si algo sobra o falta, lo ajustamos juntos. {{ACLARACION_HONORARIOS}}",
+  "honorarios_nota" => "Propuesta personalizada: si algo sobra o falta, lo ajustamos juntos.",
 
 
   /* ---------------- DATOS DE MARCELA (constante — casi no se toca) --------------- */
@@ -240,7 +238,6 @@ function e($s){ return htmlspecialchars($s, ENT_QUOTES, "UTF-8"); }
       <h2 class="section-title">Cómo trabajaríamos</h2>
       <?php foreach ($data["etapas"] as $et): ?>
         <div class="etapa">
-          <span class="tiempo"><?= e($et["tiempo"]) ?></span>
           <h3><?= e($et["titulo"]) ?></h3>
           <p><?= e($et["texto"]) ?></p>
         </div>
@@ -254,7 +251,6 @@ function e($s){ return htmlspecialchars($s, ENT_QUOTES, "UTF-8"); }
       <p class="eyebrow">Inversión</p>
       <h2 class="section-title">Honorarios</h2>
       <div class="precio-box">
-        <div class="precio"><?= e($data["honorarios_monto"]) ?></div>
         <p class="lead"><?= e($data["honorarios_modalidad"]) ?></p>
         <ul class="incluye">
           <?php foreach ($data["honorarios_incluye"] as $inc): ?>
